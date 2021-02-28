@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+:root {
+    --light: #0F3460;
+    --dark: #16213E;
+    --darkest: #1A1A2E;
+    --accent: #B3803A;
+    --wolf: #607D8B;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark);
+}
+  
+h2 {
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding-left: 38px;
+    height: 207px;
+}
+
+ul {
+    list-style: none;
+}
+  
+li a {
+    font-size: 36px;
+    color: var(--light);
+    text-align: center;
+    text-decoration: none;
+}
+
+nav {
+    margin-left: auto;
+}
+
+.darkest {
+    background-color: var(--darkest);
+}
+
+.accent {
+    color: var(--accent);
+}
+
+#nav-links li {
+    display: inline-block;
+    padding-right: 150px;
+}
+
+#nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+#nav-links li a:hover {
+    transition: all 0.3s ease 0s;
+    color: var(--accent);
+}
+
+#logo-text {
+    font-size: 72px;
+    color: white;
+}
+
+#slogan {
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
+#import {
+    width: 300px;
+    height: 300px;
+    background: #0F3460;
+    border-radius: 20px;
+    position: relative;
+}
+
+#import:hover{
+    cursor: pointer;
+}
+
+#importA1 { position:absolute; top: 0px; left: 0px; z-index: 1; } 
+#importB1 { position:absolute; top: 93.75px; left: 0px; z-index: 2; } 
