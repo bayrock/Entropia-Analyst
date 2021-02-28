@@ -1,5 +1,10 @@
 
-let importBox = document.getElementById('import')
+const importBox = document.getElementById('import')
+const files = document.getElementById('files')
+
+importBox.addEventListener('click', () => {
+    files.click()
+})
 
 ;['dragover', 'drop', 'dragenter', 'dragleave'].forEach(event => {
     window.addEventListener(event, preventDefaults, false)
@@ -31,5 +36,12 @@ function handleDrop(e) {
 }
 
 function handleFiles(files) {
-    ([...files]).forEach(console.log)
+    ([...files]).forEach(parseFile)
+}
+
+function parseFile(file) {
+    const reader = new FileReader()
+    reader.onload = event => console.log(event.target.result)
+    reader.onerror = error => console.error(error)
+    reader.readAsText(file)
 }
