@@ -41,7 +41,15 @@ function handleFiles(files) {
 
 function parseFile(file) {
     const reader = new FileReader()
-    reader.onload = event => console.log(event.target.result)
+    reader.onload = event => matchSkills(event.target.result)
     reader.onerror = error => console.error(error)
+
     reader.readAsText(file)
+}
+
+function matchSkills(chatlog) {
+    const pattern = /(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) \[System\] \[\] You have gained (\d\.*\d*) (.+)/g
+    const skills = chatlog.match(pattern)
+
+    skills.forEach(skill => console.log(skill))
 }
