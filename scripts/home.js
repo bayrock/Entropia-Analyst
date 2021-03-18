@@ -29,8 +29,7 @@ function unhighlight(e) {importBox.classList.add('inactive')}
 window.addEventListener('drop', handleDrop, false)
 
 function handleDrop(e) {
-  let dt = e.dataTransfer
-  let files = dt.files
+  const files = e.dataTransfer.files
 
   handleFiles(files)
 }
@@ -49,7 +48,13 @@ function parseFile(file) {
 
 function matchSkills(chatlog) {
     const pattern = /(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) \[System\] \[\] You have gained (\d\.*\d*) (.+)/g
-    const skills = chatlog.match(pattern)
 
-    skills.forEach(skill => console.log(skill))
+    let matches, skills = []
+    while (matches = pattern.exec(chatlog))
+        skills.push(matches[3])
+
+    skills = skills.map(skill => skill.remove("experience in your ").remove(" skill"))
+    console.log(skills)
 }
+
+String.prototype.remove = function(str) { return this.replace(str, "") }
