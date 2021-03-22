@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vendor/Chart.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <title>Entropia Analyst</title>
 
-    <script src="scripts/home.js" defer></script>
+    <script src="scripts/vendor/Chart.min.js" defer></script>
+    <script type="module" src="scripts/home.js" defer></script>
 </head>
     <body>
         <header class="darkest">
@@ -22,11 +24,15 @@
         </header>
         <center>
             <h2 id="slogan">Import your <span class="accent">chat.log</span> to begin</h2>
-            <div id="import" class="inactive">
-                <input type="file" accept=".log" id="files" style="display:none" onchange="handleFiles(this.files)"> 
+            <section id="import" class="inactive">
+                <input type="file" accept=".log" id="files" style="display:none"> 
                 <img src="img/import_outline.svg" id="importA1">
                 <img src="img/import_arrow.svg" id="importB1">
-            </div>
+            </section>
+            <section id="analysis">
+                <div id="chart"><canvas id="canvas"></canvas></div>
+                <div id="skills"></div>
+            </section>
         </center>
     </body>
 </html>

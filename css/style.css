@@ -82,6 +82,20 @@ nav {
     margin-bottom: 65px;
 }
 
+#analysis {
+    display: flex;
+    flex-direction: row;
+    /*margin: 10px;*/
+}
+
+#chart { 
+    width: 50%;
+}
+
+#skills {
+    flex: 50%;
+}
+
 #import {
     width: 300px;
     height: 300px;

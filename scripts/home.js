@@ -1,9 +1,15 @@
 
+import {createChart} from './chart.js'
+
 const importBox = document.getElementById('import')
-const files = document.getElementById('files')
+const input = document.getElementById('files')
 
 importBox.addEventListener('click', () => {
-    files.click()
+    input.click()
+})
+
+input.addEventListener('change', function () {
+    handleFiles(this.files)
 })
 
 ;['dragover', 'drop', 'dragenter', 'dragleave'].forEach(event => {
@@ -77,6 +83,7 @@ function readSkills(chatlog) {
         console.log(`%c${skill}:%c ${total}`, "font-weight:bold;", "font-weight:normal;")
     }
 
+    let chart = createChart()
     console.log(`%cShowing ${length} gains since ${startDate}`, "font-weight:bold;color:green;")
 }
 
