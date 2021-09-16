@@ -1,5 +1,5 @@
 
-import {createChart} from './chart.js'
+//import {createChart} from './chart.js'
 
 const importBox = document.getElementById('import')
 const input = document.getElementById('files')
@@ -83,7 +83,7 @@ function readSkills(chatlog) {
         console.log(`%c${skill}:%c ${total}`, "font-weight:bold;", "font-weight:normal;")
     }
 
-    let chart = createChart()
+    //let chart = createChart()
     console.log(`%cShowing ${length} gains since ${startDate}`, "font-weight:bold;color:green;")
 }
 
