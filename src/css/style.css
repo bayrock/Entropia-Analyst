@@ -4,6 +4,7 @@
     --light: #0F3460;
     --dark: #16213E;
     --darkest: #1A1A2E;
+    --darkest80: #1A1A2E80;
     --accent: #B3803A;
     --wolf: #607D8B;
 }
@@ -15,7 +16,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     background-color: var(--dark);
 }
   
@@ -58,6 +59,40 @@ nav {
     background-color: var(--light);
 }
 
+.skill-well {
+    width: 700px;
+    height: 100px;
+    padding: 25px 30px;
+    margin: 32.5px 0px 15px 0px;
+    /*background-color: var(--darkest80);*/
+    /*background: linear-gradient(90deg, var(--darkest80) 75%, var(--light) 25%);*/
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    float: left;
+    border: 1px solid var(--accent);
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+.skill-label {
+    float: left;
+    padding-top: 5px;
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--accent);
+}
+
+.skill-gain {
+    float: right;
+    padding-top: 5px;
+    font-size: 22px;
+    color: var(--wolf);
+}
+
 #nav-links li {
     display: inline-block;
     padding-right: 150px;
@@ -79,28 +114,26 @@ nav {
 
 #slogan {
     margin-top: 65px;
-    margin-bottom: 65px;
 }
 
 #analysis {
-    display: flex;
+    /*display: flex;
     flex-direction: row;
-    /*margin: 10px;*/
+    margin: 10px;*/
 }
 
 #chart { 
     width: 50%;
 }
 
-#skills {
-    flex: 50%;
-}
+/*#skills {}*/
 
 #import {
     width: 300px;
     height: 300px;
     border-radius: 20px;
     position: relative;
+    margin-top: 65px;
     transition: all 0.3s ease 0s;
 }
 
