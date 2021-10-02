@@ -58,7 +58,7 @@ function createSkill(label, gain) {
     let element = document.createElement('div')
     let icon = label.toLowerCase().replace(/\s/g, "_")
     element.classList.add('skill-well')
-    element.innerHTML = `<img src="img/skills/${icon}.jpg" class="skill-icon"><div class="skill-label">${label}</div><div class="skill-gain">${gain}</div>`
+    element.innerHTML = `<img src="src/img/skills/${icon}.jpg" class="skill-icon"><div class="skill-label">${label}</div><div class="skill-gain">${gain}</div>`
     
     return element
 }
