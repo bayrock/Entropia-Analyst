@@ -73,8 +73,13 @@ function getSortedData(skillData) {
     for (const skill in skillData)
         sorted.push({label: skill, gain: skillData[skill]})
 
+    // Sort by highest skill gain
     sorted.sort((a, b) => {return b.gain - a.gain})
     return sorted
+}
+
+function getPrettyNumber(num) {
+    return (num >= 1 ? num.toFixed(1) : num.toFixed(2))
 }
 
 function readSkills(chatlog) {
@@ -107,7 +112,7 @@ function readSkills(chatlog) {
     // Log skill data to console
     const length = Object.keys(skillData).length
     getSortedData(skillData).forEach((skill) => {
-        total = skill.gain.toFixed(2)
+        total = getPrettyNumber(skill.gain)
         
         let skillElement = createSkill(skill.label, total)
         let percentage = getOverallPercentage(total, overall)
