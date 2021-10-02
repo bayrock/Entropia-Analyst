@@ -116,17 +116,19 @@ nav {
     margin-top: 65px;
 }
 
-#analysis {
-    /*display: flex;
-    flex-direction: row;
-    margin: 10px;*/
+#social {
+    position: fixed;
+    bottom: 0;
+    /*right: 0;*/
+    padding-left: 8px;
+    padding-bottom: 2px;
+    /*padding-right: 6px;*/
+    opacity: 0.2;
 }
 
 #chart { 
     width: 50%;
 }
-
-/*#skills {}*/
 
 #import {
     width: 300px;
