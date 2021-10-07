@@ -28,7 +28,15 @@ header {
     display: flex;
     align-items: center;
     padding-left: 38px;
-    height: 207px;
+    height: auto; /*207px*/
+    width: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
 }
 
 ul {
@@ -46,6 +54,16 @@ nav {
     margin-left: auto;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    /*right: 0;*/
+    padding-left: 8px;
+    padding-bottom: 2px;
+    /*padding-right: 6px;*/
+    opacity: 0.2;
+}
+
 .darkest {
     background-color: var(--darkest);
 }
@@ -57,6 +75,10 @@ nav {
 .inactive {
     transition: all 0.3s ease 0s;
     background-color: var(--light);
+}
+
+.no-select {
+    user-select: none;
 }
 
 .skill-well {
@@ -113,17 +135,8 @@ nav {
 }
 
 #slogan {
+    text-align: center;
     margin-top: 65px;
-}
-
-#social {
-    position: fixed;
-    bottom: 0;
-    /*right: 0;*/
-    padding-left: 8px;
-    padding-bottom: 2px;
-    /*padding-right: 6px;*/
-    opacity: 0.2;
 }
 
 #chart { 
@@ -148,3 +161,52 @@ nav {
 /* Vector */
 #importA1 { position:absolute; top: 0px; left: 0px; z-index: 1; opacity: 0.75; }
 #importB1 { position:absolute; top: 93.75px; left: 0px; z-index: 2; }
+
+/* iPad Pro and below */
+@media only screen and (max-width: 1300px) {
+    nav {
+        overflow: hidden;
+    }
+
+    #logo-text {
+        display: none;
+    }
+}
+
+/* Below iPad */
+@media only screen and (max-width: 710px) {
+    .skill-well {
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .skill-label {
+        font-size: 14px;
+    }
+
+    .skill-label,
+    .skill-gain {
+        float: none;
+        padding-top: 0px;
+    }
+
+    .skill-icon {
+        margin-right: 10px;
+    }
+}
+
+/* iPhone 5 5/SE and below */
+@media only screen and (max-width: 330px) {
+    header {
+        padding-left: 10px;
+    }
+
+    li a {
+        font-size: 24px;
+    }
+
+    #import {
+        transform: scale(0.7);
+        margin-top: 0px;
+    }
+}
