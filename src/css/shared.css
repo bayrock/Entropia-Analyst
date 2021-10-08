@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+:root {
+    --light: #0F3460;
+    --dark: #16213E;
+    --darkest: #1A1A2E;
+    --darkest80: #1A1A2E80;
+    --accent: #B3803A;
+    --wolf: #607D8B;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: var(--dark);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding-left: 38px;
+    height: auto; /*207px*/
+    width: auto;
+}
+
+nav {
+    margin-left: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+h2 {
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+  
+li a {
+    font-size: 36px;
+    color: var(--light);
+    text-align: center;
+    text-decoration: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    /*right: 0;*/
+    padding-left: 8px;
+    padding-bottom: 2px;
+    /*padding-right: 6px;*/
+    opacity: 0.2;
+}
+
+.darkest {
+    background-color: var(--darkest);
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.no-select {
+    user-select: none;
+}
+
+#nav-links li {
+    display: inline-block;
+    padding-right: 150px;
+}
+
+#nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+#nav-links li a:hover {
+    transition: all 0.3s ease 0s;
+    color: var(--accent);
+}
+
+#logo-text {
+    font-size: 72px;
+    color: white;
+}
+
+/* iPad Pro and below */
+@media only screen and (max-width: 1300px) {
+    nav {
+        overflow: hidden;
+    }
+
+    #logo-text {
+        display: none;
+    }
+}
+
+/* iPhone 5 5/SE and below */
+@media only screen and (max-width: 330px) {
+    header {
+        padding-left: 10px;
+    }
+
+    li a {
+        font-size: 24px;
+    }
+}

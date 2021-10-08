@@ -1,84 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-
-:root {
-    --light: #0F3460;
-    --dark: #16213E;
-    --darkest: #1A1A2E;
-    --darkest80: #1A1A2E80;
-    --accent: #B3803A;
-    --wolf: #607D8B;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Poppins';
-    background-color: var(--dark);
-}
-  
-h2 {
-    color: white;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    padding-left: 38px;
-    height: auto; /*207px*/
-    width: auto;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-}
-
-ul {
-    list-style: none;
-}
-  
-li a {
-    font-size: 36px;
-    color: var(--light);
-    text-align: center;
-    text-decoration: none;
-}
-
-nav {
-    margin-left: auto;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    /*right: 0;*/
-    padding-left: 8px;
-    padding-bottom: 2px;
-    /*padding-right: 6px;*/
-    opacity: 0.2;
-}
-
-.darkest {
-    background-color: var(--darkest);
-}
-
-.accent {
-    color: var(--accent);
-}
 
 .inactive {
     transition: all 0.3s ease 0s;
     background-color: var(--light);
-}
-
-.no-select {
-    user-select: none;
 }
 
 .skill-well {
@@ -115,25 +38,6 @@ footer {
     color: var(--wolf);
 }
 
-#nav-links li {
-    display: inline-block;
-    padding-right: 150px;
-}
-
-#nav-links li a {
-    transition: all 0.3s ease 0s;
-}
-
-#nav-links li a:hover {
-    transition: all 0.3s ease 0s;
-    color: var(--accent);
-}
-
-#logo-text {
-    font-size: 72px;
-    color: white;
-}
-
 #slogan {
     text-align: center;
     margin-top: 65px;
@@ -159,15 +63,11 @@ footer {
 }
 
 /* Vector */
-#importA1 { position:absolute; top: 0px; left: 0px; z-index: 1; opacity: 0.75; }
-#importB1 { position:absolute; top: 93.75px; left: 0px; z-index: 2; }
+#import-outline { position:absolute; top: 0px; left: 0px; z-index: 1; opacity: 0.75; }
+#import-arrow { position:absolute; top: 93.75px; left: 0px; z-index: 2; }
 
 /* iPad Pro and below */
 @media only screen and (max-width: 1300px) {
-    nav {
-        overflow: hidden;
-    }
-
     #logo-text {
         display: none;
     }
@@ -197,14 +97,6 @@ footer {
 
 /* iPhone 5 5/SE and below */
 @media only screen and (max-width: 330px) {
-    header {
-        padding-left: 10px;
-    }
-
-    li a {
-        font-size: 24px;
-    }
-
     #import {
         transform: scale(0.7);
         margin-top: 0px;
