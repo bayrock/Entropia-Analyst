@@ -66,13 +66,6 @@
 #import-outline { position:absolute; top: 0px; left: 0px; z-index: 1; opacity: 0.75; }
 #import-arrow { position:absolute; top: 93.75px; left: 0px; z-index: 2; }
 
-/* iPad Pro and below */
-@media only screen and (max-width: 1300px) {
-    #logo-text {
-        display: none;
-    }
-}
-
 /* Below iPad */
 @media only screen and (max-width: 710px) {
     .skill-well {

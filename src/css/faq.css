@@ -1,1 +1,64 @@
-/* faq.css */
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+.accordion-item:first-of-type {
+    margin-top: 65px;
+}
+
+.accordion-item {
+    background-color: var(--darkest80);
+    padding: 10px;
+    margin-top: 32.5px;
+}
+
+.accordion-item:target .answer {
+    max-height: 200px;
+}
+
+.accordion-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    width: 100%;
+}
+
+.accordion-item:target .accordion-link {
+    padding-bottom: 10px;
+}
+
+.answer {
+    padding-left: 10px;
+    overflow: hidden;
+    max-height: 0px;
+    position: relative;
+    /* background-color: var(--light); */
+}
+
+.answer::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 90%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    background-color: var(--light);
+    opacity: 0.7;
+}
+
+.minus {
+    display: none;
+    z-index: 100;
+}
+
+.accordion-item:target .accordion-link .minus {
+    display: revert;
+}
+
+.accordion-item:target .accordion-link .plus {
+    display: none;
+}

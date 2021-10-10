@@ -9,21 +9,59 @@
     <title>Entropia Analyst FAQ</title>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script type="module" src="src/scripts/home.js" defer></script>
+    <!-- <script type="module" src="src/scripts/faq.js" defer></script> -->
 </head>
     <body>
         <header class="darkest">
             <img src="src/img/logo.png" id="logo"><div id="logo-text" class="no-select">Entropia <span class="accent">Analyst</span></div>
             <nav>
                 <ul id="nav-links" class="no-select">
-                    <li><a href="/Entropia-Analyst/index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#" class="accent">FAQ</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section id="">
-                <div id=""></div>
+            <section>
+                <div class="container">
+                    <div class="accordion">
+                        <div class="accordion-item" id="question1">
+                            <a class="accordion-link" href="#question1">
+                                <h2>What is this tool for?</h2>
+                                <img src="src/img/plus.svg" class="plus">
+                                <img src="src/img/minus.svg" class="minus">
+                            </a>
+                            <div class="answer">
+                                <p>Entropia Analyst is a tool for tracking and visualizing skill gains in Entropia Universe. 
+                                    Simply drag 'n drop your chat.log to the <a href="index.html">homepage</a> to begin!</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" id="question2">
+                            <a class="accordion-link" href="#question2">
+                                <h2>Where can I find chat.log?</h2>
+                                <img src="src/img/plus.svg" class="plus">
+                                <img src="src/img/minus.svg" class="minus">
+                            </a>
+                            <div class="answer">
+                                <p>If you have enabled Main chat logs, you should find your chat.log within the "Documents/Entropia Universe" folder of your system. 
+                                    Chat logs may be enabled via the Options UI in-game.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" id="question3">
+                            <a class="accordion-link" href="#question3">
+                                <h2>Can I contribute to this project?</h2>
+                                <img src="src/img/plus.svg" class="plus">
+                                <img src="src/img/minus.svg" class="minus">
+                            </a>
+                            <div class="answer">
+                                <p>Yes! Entropia Analyst is an open source project. If you're a developer, consider forking the official <a href="https://github.com/bayrock/Entropia-Analyst" target="blank">GitHub repo</a>. 
+                                Other options for supporting the project are TBD.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>

@@ -10,9 +10,13 @@
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing: inherit;
     margin: 0;
     padding: 0;
+}
+
+html {
+    box-sizing: border-box;
 }
 
 body {
@@ -24,8 +28,12 @@ header {
     display: flex;
     align-items: center;
     padding-left: 38px;
-    height: auto; /*207px*/
+    height: auto; /* 207px */
     width: auto;
+}
+
+a {
+    color: var(--accent)
 }
 
 nav {
@@ -36,10 +44,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
+    justify-content: center;
 }
 
-h2 {
+h2, p {
     color: white;
 }
 
@@ -57,10 +65,10 @@ li a {
 footer {
     position: fixed;
     bottom: 0;
-    /*right: 0;*/
+    /* right: 0; */
     padding-left: 8px;
     padding-bottom: 2px;
-    /*padding-right: 6px;*/
+    /* padding-right: 6px; */
     opacity: 0.2;
 }
 
